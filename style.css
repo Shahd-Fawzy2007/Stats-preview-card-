@@ -6,26 +6,30 @@
     --White-main-paragraph: hsla(0, 0%, 100%, 0.75);
     --White-stat-headings: hsla(0, 0%, 100%, 0.6);
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     min-height: 100vh;
-    
+
 }
-body{
+
+body {
     background-color: var(--Navy-950);
     font-family: "Inter", sans-serif;
-    
+
 }
-.card{
+
+.card {
     background-color: var(--Blue-950);
     border-radius: 6px;
     max-width: 350px;
@@ -34,88 +38,104 @@ body{
     margin: 3rem;
 
 }
+
 .card-img {
     position: relative;
     width: 100%;
- 
+
 }
-.card-img img{
+
+.card-img img {
     display: block;
     width: 100%;
 }
-.card-img::before{
+
+.card-img::before {
     content: "";
     left: 0;
     top: 0;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color:var(--Purple-500);
+    background-color: var(--Purple-500);
     opacity: 0.5;
     z-index: 1;
- 
+
 }
-.card-content h1{
-color: var(--White-main-heading-stats);
-font-weight: 700;
-font-size: 37px;
-    padding-top: 2rem ;
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
 }
-.card-content h1 span{
+
+.card-content h1 {
+    color: var(--White-main-heading-stats);
+    font-weight: 700;
+    font-size: 37px;
+    padding-block-start: 2rem;
+}
+
+.card-content h1 span {
     color: var(--Purple-500);
-    
+
 }
-.card-content p{
+
+.card-content p {
     color: var(--White-main-paragraph);
     font-weight: 400;
     line-height: 1.5;
     font-size: 18px;
 }
-.stats-list{
+
+.stats-list {
     list-style: none;
     font-family: "Lexend Deca", sans-serif;
     font-weight: 400;
-    text-transform:uppercase;
-    padding-bottom: 2rem ;
+    text-transform: uppercase;
+    padding-block-end: 2rem;
 
 }
-.stats-list h2{
+
+.stats-list h2 {
     color: var(--White-main-heading-stats);
     padding: 0.7rem 0;
 }
-.stats-list span{
+
+.stats-list span {
     color: var(--White-stat-headings);
 
 
 }
-.card-content{
-display: flex;
-flex-direction: column;
-gap: 1.5rem;
 
-}
-@media (min-width: 900px) {
-    .card{
+@media (min-width:56.25rem) {
+    .card {
         display: flex;
         flex-direction: row;
-        flex-direction:row-reverse;
-        max-width: 1000px;
+        flex-direction: row-reverse;
+        max-width: 62.5rem;
         text-align: left;
 
     }
-    .card-img img{
+
+    .card-img img {
         height: 100%;
         object-fit: cover;
     }
-    .card-img,.card-content{
+
+    .card-img,
+    .card-content {
         width: 50%;
     }
-    .card-content{
+
+    .card-content {
         padding: 0 2rem;
         display: flex;
         justify-content: center;
     }
-    .stats-list{
+
+    .stats-list {
         display: flex;
         gap: 3rem;
     }
